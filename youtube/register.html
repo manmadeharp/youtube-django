@@ -1,7 +1,17 @@
-Register Form
-<br>
-<form action="Register" method="POST">
+{% extends "parent.html" %}
+
+{%block title%}
+
+regist your account
+
+{% endblock %}
+
+{% block body %}<br>
+
+<form action="register" method="POST">
     {% csrf_token %}
 {{ form }}
-<br><input type="submit" value="register!">
+<br>
+    <input type="submit" value="register">
 </form>
+{% endblock %}

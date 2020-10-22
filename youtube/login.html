@@ -1,7 +1,18 @@
-Login Form
+{% extends "parent.html" %}
+
+{%block title%}
+
+Log into your account
+
+{% endblock %}
+
+{% block body %}
+
 <br>
 <form action="login" method="POST">
     {% csrf_token %}
 {{ form }}
-<br><input type="submit" value="Log in!">
+<br>
+    <input type="submit" value="Log in!">
 </form>
+{% endblock %}
