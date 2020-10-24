@@ -4,11 +4,14 @@
 {% endblock %}
 
 {% block body %}
-<h1>Welcome to Django Youtube</h1>br>
-Most recent videos<br>
-    <ul>
-    <li>Video ID 1</li>
-    <li>Video ID 2</li>
-    </ul>
-{{ variableA }}
+<h1>Welcome to Django Youtube</h1><br>
+<h1>Most recent videos</h1><br>
+    <div style="align-content: start; width: 50%; border-color: black; border-width: 1px;border-style: solid">
+    {% for video in most_recent_videos %}
+        <h6>{{ video.title }}</h6>
+        <p style="font-size: 7px; color: grey;"> uploaded by {{ videosuser }} on {{ video.datetime }}</p>
+        <p>{{ video.description }}</p>
+        <p></p>
+    {% endfor %}
+    </div>
 {% endblock %}

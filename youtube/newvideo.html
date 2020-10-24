@@ -1,11 +1,19 @@
 {%  extends 'parent.html' %}
 {% block title %}
+    Upload Video
 {% endblock %}
 
 {% block body %}
-this is index view<br>
-this is a get request<br>
+    <form enctype="multipart/form-data" action="newvideo" method="POST" action=".">
+    {% csrf_token %}
     <table>
 {{ form.as_table }}
+<tr>
+        <td>
+    <button type="submit" class="btn btn-primary">Upload video</button>
+        </td>
+</tr>
+
     </table>
+    </form>
 {% endblock %}

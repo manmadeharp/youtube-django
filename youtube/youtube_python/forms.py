@@ -10,7 +10,7 @@ class RegisterForm(forms.Form):
 
 class NewVideoForm(forms.Form):
     title = forms.CharField(label='Title', max_length=50);
-    description = forms.Textarea();
+    description = forms.CharField(label='Description', max_length=50);
     file = forms.FileField();
 
 
