@@ -5,5 +5,7 @@
 {% block body %}
 this is index view<br>
 this is a get request<br>
-{{ form }}
+    <table>
+{{ form.as_table }}
+    </table>
 {% endblock %}

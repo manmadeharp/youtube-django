@@ -9,10 +9,12 @@ Log into your account
 {% block body %}
 
 <br>
-<form action="login" method="POST">
+<form action="login" method="POST" role="form">
     {% csrf_token %}
-{{ form }}
+    <table>
+{{ form.as_table }}
+    </table>
 <br>
-    <input type="submit" value="Log in!">
+    <button type="button" class="btn btn-primary" role="button">Log in</button>
 </form>
 {% endblock %}

@@ -2,7 +2,7 @@
 
 {%block title%}
 
-regist your account
+register your account
 
 {% endblock %}
 
@@ -10,7 +10,9 @@ regist your account
 
 <form action="register" method="POST">
     {% csrf_token %}
-{{ form }}
+<table>
+{{ form.as_table }}
+    </table>
 <br>
     <input type="submit" value="register">
 </form>
