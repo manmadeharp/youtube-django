@@ -10,10 +10,8 @@ register your account
 
 <form action="register" method="POST">
     {% csrf_token %}
-<table>
-{{ form.as_table }}
-    </table>
+{{ form }}
 <br>
-    <input type="submit" value="register">
+    <button type="submit" class="btn btn-primary">Create Account</button>
 </form>
 {% endblock %}

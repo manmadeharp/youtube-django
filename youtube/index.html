@@ -6,12 +6,14 @@
 {% block body %}
 <h1>Welcome to Django Youtube</h1><br>
 <h1>Most recent videos</h1><br>
-    <div style="align-content: start; width: 50%; border-color: black; border-width: 1px;border-style: solid">
-    {% for video in most_recent_videos %}
-        <h6>{{ video.title }}</h6>
-        <p style="font-size: 7px; color: grey;"> uploaded by {{ videosuser }} on {{ video.datetime }}</p>
-        <p>{{ video.description }}</p>
-        <p></p>
-    {% endfor %}
+{% for video in most_recent_videos %}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h6 class="display-4">{{ video.title }}</h6>
+            <p class="lead">{{ video.description }}</p>
+            <p style="font-size: 7px; color: grey;"> uploaded by {{ video.user }} on {{ video.datetime }}</p>
+            <p style="text-align: right"><a href='/video/{{ video.id }}'>Watch Video</a></p>
+        </div>
     </div>
+{% endfor %}
 {% endblock %}
